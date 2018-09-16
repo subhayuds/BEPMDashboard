@@ -1,0 +1,96 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table" xmlns:cc="com.hcl.BPEMDashboard.control"
+xmlns="sap.m" controllerName="com.hcl.BPEMDashboard.controller.CaseList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Clarification Case List" showNavButton="false" showHeader="true" enableScrolling="false" class="sapUiContentPadding">
+		<content>
+			<t:Table
+				id="tabCaseList"
+				rows="{/cases}"
+				title="Clarification Cases"
+				selectionMode="None"
+				visibleRowCount="14">
+				<t:columns>
+					<t:Column width="5rem" hAlign="Center">
+						<Label text="Overdue" />
+						<t:template>
+							<VBox width="100%" alignItems="Center">
+								<cc:ColorCircle value="" status="{overdue}" size="15px"/>
+							</VBox>
+						</t:template>
+					</t:Column>
+					<t:Column width="5rem" hAlign="Center">
+						<Label text="Case" />
+						<t:template>
+							<Text text="{case}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="10rem" hAlign="Center">
+						<Label text="Clarification Case Text" />
+						<t:template>
+							<Text text="{text}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Status" />
+						<t:template>
+							<Text text="{status}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Case Type" />
+						<t:template>
+							<Text text="{type}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Category" />
+						<t:template>
+							<Text text="{category}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Case Priority" />
+						<t:template>
+							<Text text="{priority}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="12rem" hAlign="Center">
+						<Label text="Object Short Description" />
+						<t:template>
+							<Text text="{desc}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Due Date" />
+						<t:template>
+							<Text text="{dueDate}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Due Time" />
+						<t:template>
+							<Text text="{dueTime}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Created On" />
+						<t:template>
+							<Text text="{ctreatedOn}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Created Time" />
+						<t:template>
+							<Text text="{createdTime}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="7rem" hAlign="Center">
+						<Label text="Created By" />
+						<t:template>
+							<Text text="{createdBy}" wrapping="false" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+			</t:Table>
+		</content>
+	</Page>
+</mvc:View>

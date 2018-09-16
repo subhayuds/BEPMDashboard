@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.hcl.BPEMDashboard.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="BPEM Dashboard" showNavButton="false" showHeader="true" enableScrolling="false" class="sapUiContentPadding">
+				<content>
+					<VBox alignItems="Center" width="100%">
+						<Image src="mime/BPEMDashboardPageContent.png" densityAware="false" width="95%" press="onPressDashboard">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Image>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
